@@ -11,18 +11,12 @@ class Statictic(models.Model):
     @property
     def cpc(self) -> typing.Optional[float]:
         if self.cost and self.clicks:
-            if self.clicks == 0:
-                return float('inf')
-            else:
-                return self.cost / self.clicks
+            return self.cost / self.clicks
     
     @property
     def cpm(self) -> typing.Optional[float]:
         if self.cost and self.views:
-            if self.views == 0:
-                return float('inf')
-            else:
-                return self.cost / self.views * 1000
+            return self.cost / self.views * 1000
 
 
 
