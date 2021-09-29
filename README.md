@@ -10,6 +10,9 @@ service will start at localhost:8000
 # Communicate
 
 ## Create statistic
+
+provide `date`, `views`, `clicks`, `cost` in json request
+
 ```bash
 curl -X POST \
   http://localhost:8000/api/statistic/ \
@@ -23,6 +26,8 @@ curl -X POST \
 ```
 
 ## Show statistics
+
+provide `from` and `to` field in url request using `YYYY-MM-DD` date format
 
 ```bash
 curl -X GET \
